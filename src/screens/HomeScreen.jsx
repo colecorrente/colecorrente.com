@@ -5,7 +5,7 @@ import { fadeIn, slideInDown } from 'react-animations';
 import {
   FaGithub, FaLinkedin, FaInstagram, FaFileAlt, FaTimes,
 } from 'react-icons/fa';
-import { MdEmail, MdPerson } from 'react-icons/md';
+import { MdEmail } from 'react-icons/md';
 import COLEpng from '../img/COLE.png';
 import resume from '../files/resume.pdf';
 import ScrollArrows from '../components/ScrollArrows';
@@ -273,6 +273,10 @@ const Home = (props) => {
   };
 
   const togglePDF = () => {
+    if (window.innerWidth < 500) {
+      return window.open(resume);
+    }
+
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
