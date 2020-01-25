@@ -314,12 +314,12 @@ const Home = (props) => {
               <p>{isResumeOpen ? 'Close' : 'Resume'}</p>
             </IconWithText>
             <Divider />
-            <a href="#about">
+            {/* <a href="#about">
               <IconWithText>
                 <MdPerson css={iconLinkStyle} />
                 <p>About</p>
               </IconWithText>
-            </a>
+            </a> */}
             <a href="#contact">
               <IconWithText>
                 <MdEmail css={iconLinkStyle} />
