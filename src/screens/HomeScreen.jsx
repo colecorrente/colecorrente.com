@@ -11,6 +11,8 @@ import resume from '../files/resume.pdf';
 import ScrollArrows from '../components/ScrollArrows';
 import ColorPicker from '../components/ColorPicker';
 
+const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
 const colors = ['#f87d84', '#bf212d', '#E5692C', '#037d84', '#77949c', '#7DB9F8', '#B57DF8', '#7DF886', '#47E594', '#2cc457'];
 
 const fadeInAnim = keyframes`${fadeIn}`;
@@ -252,8 +254,9 @@ const Home = (props) => {
   const [verticalLinks] = useState(React.createRef());
 
   useEffect(() => {
-    window.addEventListener('scroll', listenToScroll);
-
+    if (isChrome) {
+      window.addEventListener('scroll', listenToScroll);
+    }
     return () => {
       window.removeEventListener('scroll', listenToScroll);
     };
