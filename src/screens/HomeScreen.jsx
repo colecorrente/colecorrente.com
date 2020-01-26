@@ -364,8 +364,8 @@ const Home = (props) => {
             </label>
           </FormColumn>
           <FormColumn borderColor={backgroundColor}>
-            <label htmlFor="subject">Message:
-              <textarea type="text" name="_subject" required />
+            <label htmlFor="message">Message:
+              <textarea type="text" name="message" required />
             </label>
             <div css={{ width: '100%', marginTop: 'auto' }}>
               <p>all fields required</p>
