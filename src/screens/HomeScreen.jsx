@@ -13,6 +13,7 @@ import ScrollArrows from '../components/ScrollArrows';
 import ColorPicker from '../components/ColorPicker';
 
 ReactGA.initialize('UA-105689205-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 
