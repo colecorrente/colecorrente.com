@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { keyframes, css } from '@emotion/core';
 import styled from '@emotion/styled';
+import ReactGA from 'react-ga';
 import { fadeIn, slideInDown } from 'react-animations';
 import {
   FaGithub, FaLinkedin, FaInstagram, FaFileAlt, FaTimes,
@@ -10,6 +11,8 @@ import COLEpng from '../img/COLE.png';
 import resume from '../files/resume.pdf';
 import ScrollArrows from '../components/ScrollArrows';
 import ColorPicker from '../components/ColorPicker';
+
+ReactGA.initialize('UA-105689205-1');
 
 const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 
@@ -364,7 +367,7 @@ const Home = (props) => {
             </label>
           </FormColumn>
           <FormColumn borderColor={backgroundColor}>
-            <label htmlFor="message">Message:
+            <label htmlFor="mesmessagesagemessage">Message:
               <textarea type="text" name="message" required />
             </label>
             <div css={{ width: '100%', marginTop: 'auto' }}>
