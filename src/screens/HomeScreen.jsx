@@ -295,6 +295,11 @@ const Home = (props) => {
       document.body.style.overflow = 'auto';
     } else {
       // disable scrolling
+      ReactGA.event({
+        category: 'Interaction',
+        action: 'Resume Openend',
+      });
+
       document.body.style.overflow = 'hidden';
     }
     setIsResumeOpen(!isResumeOpen);
