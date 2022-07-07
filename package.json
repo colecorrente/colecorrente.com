@@ -51,7 +51,7 @@
         "@emotion/styled": "^10.0.15",
         "core-js": "3",
         "emotion-theming": "^10.0.14",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "normalize.css": "^8.0.1",
         "prop-types": "^15.7.2",
         "react": "^16.8.6",
